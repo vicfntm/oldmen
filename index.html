@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oldman</title>
+    <link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="resources/posters.js"></script>
+	<link href='https://dl.dropboxusercontent.com/s/2xhx64mc0bpyw2q/rocket.png?dl=0' rel='icon' type='image/x-icon'/>
+	
+</head>
+<body ng-app="countryApp">
+	<div class="grid" ng-controller="CountryCtrl">
+		<div class="main_container">
+			<div class="squares one">
+				<div class="inputblock">
+					<input type="text" placeholder="Search..." ng-model="search.title">
+				</div>
+				<div class="bluecircle">
+					<div class="magnifier">
+						</div>
+				</div>
+			</div>
+			
+			<div class="squares two"><div class="pics" style="background-image: url({{defaultPic}})"></div></div>
+			<div class="squares three">
+			<div class="itemListContent">
+				<ul>
+					<li ng-repeat="x in FilteredData =( desc  | filter:search ) " ng-init="">
+						<div class="rocket"></div><div class="itemList"  ng-click="changeDescr(x)">{{x.title}}</div>
+					</li>
+				</ul>
+				<ul>
+					<li ng-if="FilteredData.length==0">
+						<div class="rocket"></div><div class="itemList">{{defaultHeader}}</div>
+					</li>
+				</ul>
+			</div>
+			</div>
+			<div class="squares four"><div class="textcontent"><div class="textBlock">{{defaultHeader}}</div>
+			<div class="textBlock">{{defaultDescription}}</div></div></div>
+		</div>
+	</div>
+</body>
+</html>

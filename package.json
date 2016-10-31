@@ -1,0 +1,29 @@
+{
+  "name": "oldmen-test",
+  "version": "1.0.0",
+  "description": "testpackage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oldmendigital/oldmen-test.git"
+  },
+  "author": "vic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oldmendigital/oldmen-test/issues"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-serve":"latest"
+  }
+}
